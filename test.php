@@ -6,16 +6,35 @@
     <title>Lesson 1</title>
 </head>
 <body>
-    <?php
-    $is_read = false;
-    if($is_read)
-    {
-        $message = "first meeting with Mr Gharibi was done!!";
-    }else{
-        $message = "I must set a meeting with Mr Gharibi";
-    }
+<?php
+    $books = [
+        [
+            'title' => 'The first book',
+            'Author' => 'The first Author',
+            'publish_date' => '1395',
+            'price' => '100000'
+        ],
+        [
+            'title' => 'The second book',
+            'Author' => 'The second Author',
+            'publish_date' => '1399',
+            'price' => '200000'
+        ],
+        [
+            'title' => 'The third book',
+            'Author' => 'The third Author',
+            'publish_date' => '1395',
+            'price' => '150000'
+        ]
+    ];
     ?>
-    <h1>This is the first session coding</h1>
-    <h3><?= $message?></h3>
+    <h3>Books list</h3>
+    <table>
+        <?php foreach($books as $key=>$value){ ?>
+            <tr>
+                <td> <?= $key ?> </td> <td> <?php var_dump($value) ?> </td>    
+            </tr>    
+        <?php } ?>
+
 </body>
 </html>
